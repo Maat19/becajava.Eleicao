@@ -1,58 +1,17 @@
+
 package br.eleicao.app;
 
-import java.util.Optional;
-
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import br.eleicao.app.model.Candidato;
-import br.eleicao.app.model.Eleitor;
-import br.eleicao.app.model.Municipio;
-import br.eleicao.app.model.Voto;
-import br.eleicao.app.model.Zona;
-import br.eleicao.app.repository.CandidatoRepository;
-import br.eleicao.app.repository.EleitorRepository;
-import br.eleicao.app.repository.MunicipioRepository;
-import br.eleicao.app.repository.VotoRepository;
-import br.eleicao.app.repository.ZonaRepository;
-
 @SpringBootApplication
-public class EleicaoApplication  implements CommandLineRunner{
+public class EleicaoApplication {
 
-	//Criando proprietade da interface do Municipio
-	final MunicipioRepository _municipioRepository;
-	final CandidatoRepository _candidatoRepository;
-	final EleitorRepository _eleitorRepository;
-	final VotoRepository _votoRepository;
-	final ZonaRepository _zonaRepository;
-	
-	
-	
-	
-	//Alimentando a propriedade com a construção da classe
-	
-	public EleicaoApplication (MunicipioRepository municipioRepository, 
-			CandidatoRepository candidatoRepository, 
-			EleitorRepository eleitorRepository, 
-			VotoRepository votoRepository,
-			ZonaRepository zonaRepository) {
-		
-		this._municipioRepository = municipioRepository;
-		this._candidatoRepository = candidatoRepository;
-		this._eleitorRepository = eleitorRepository;
-		this._votoRepository = votoRepository;
-		this._zonaRepository = zonaRepository;
-	}
-
-	
 	public static void main(String[] args) {
-		SpringApplication.run(EleicaoApplication.class, args);		
+		SpringApplication.run(EleicaoApplication.class, args);
 	}
-	
-	@Override
-	public void run(String... args) throws Exception {
-		
+
+}
 	
 		//ZONA ELEITORAL	
 		
@@ -194,84 +153,7 @@ public class EleicaoApplication  implements CommandLineRunner{
 		
 		
 		
-		//MUNICIPIO
-		//Salvar Município (Insert)
-		//Municipio municipio = new Municipio();
-//		municipio.setNome("São Paulo");
-//		municipio.setPopulacao(14000000);		
-//		_municipioRepository.save(municipio);		
-//		System.out.println("Município salvo com sucesso!");		
-//		
-//		municipio = new Municipio();
-//		municipio.setNome("Sorocaba");
-//		municipio.setPopulacao(140000);		
-//		_municipioRepository.save(municipio);		
-//		System.out.println("Município salvo com sucesso!");		
-//	
-//		municipio = new Municipio();
-//		municipio.setNome("Guarulhos");
-//		municipio.setPopulacao(1400000);		
-//		_municipioRepository.save(municipio);		
-//		System.out.println("Município salvo com sucesso!");		
+	
 
-		
-//		municipio = new Municipio();
-//		municipio.setNome("Campinas");
-//		municipio.setPopulacao(200000);		
-//		_municipioRepository.save(municipio);		
-//		System.out.println("Município salvo com sucesso!");		
-//		
-//		municipio = new Municipio();
-//		municipio.setNome("São Bernardo");
-//		municipio.setPopulacao(300000);		
-//		_municipioRepository.save(municipio);		
-//		System.out.println("Município salvo com sucesso!");		
-		
-		
-		
-		
-		
-		//Deletando um município
-//		Municipio municipio = new Municipio();		
-//		municipio.setId(new Long(2));
-//		_municipioRepository.delete(municipio);;
-//		System.out.println("Município deletado com sucesso!");
-//		
-		
-		
-		
-		
-		//Atualizando um município
-//		Municipio municipio = new Municipio();
-//		municipio.setId(new Long(3)); // essa função faz a atualização
-//		municipio.setNome("Guarulhos");
-//		municipio.setPopulacao(14000000);		
-//		_municipioRepository.save(municipio);		
-//		System.out.println("Município atualizado com sucesso!");	
-//		
-//		
-		
-		
-			
 
-		
-		//Selecionando apenas UM município
-//		Optional<Municipio> municipio = _municipioRepository.findById(new Long(1));
-//		System.out.println("Município: " + municipio.get().getNome());
-		
-		
-		//Selecionando todos os municípios
-//		Iterable<Municipio> municipios = _municipioRepository.findAll(); //Iterable usa para pegar todos os dados		
-//			for(Municipio m : municipios) {
-//				System.out.println("Município: " + m.getNome());
-//		}
-		
-//		Iterable<Municipio> municipio = _municipioRepository.findAll(); 		
-//			for(Municipio p : municipio) {
-//				System.out.println("População: " + p.getPopulacao());
-//		
-//	}
-
-}
-}
 
