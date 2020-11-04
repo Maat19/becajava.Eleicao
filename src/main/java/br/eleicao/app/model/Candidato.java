@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import br.eleicao.app.model.*;
 //Criar tabelas no SQL
 @Entity
-public class Canditado {
+public class Candidato {
 	//Criar PK
 	@Id
 	@GeneratedValue(strategy  = GenerationType.IDENTITY)

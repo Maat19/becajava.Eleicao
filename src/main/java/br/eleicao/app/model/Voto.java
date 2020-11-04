@@ -16,13 +16,61 @@ public class Voto {
 	
 	@ManyToOne
 	@JoinColumn (name ="CanditadoId")
-	private Canditado Canditado;
+	private Candidato Canditado;
 
 	
 	@ManyToOne
 	@JoinColumn (name ="EleitorId")
 	private Eleitor Eleitor;
 
+	@ManyToOne
+	@JoinColumn (name ="ZonaId")
+	private Zona Zona;
+	
+	
+	
+	public Long getId() {
+		return Id;
+	}
+
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+
+	public Candidato getCanditado() {
+		return Canditado;
+	}
+
+
+	public void setCanditado(Candidato canditado) {
+		Canditado = canditado;
+	}
+
+
+	public Eleitor getEleitor() {
+		return Eleitor;
+	}
+
+
+	public void setEleitor(Eleitor eleitor) {
+		Eleitor = eleitor;
+	}
+
+
+	public Zona getZona() {
+		return Zona;
+	}
+
+
+	public void setZona(Zona zona) {
+		Zona = zona;
+	}
+
+	
+	
+	
 	
 
 }
